@@ -4,7 +4,7 @@ An advanced AI-powered travel planning system that demonstrates cutting-edge LLM
 
 ## 🎯 Project Overview
 
-This project implements an intelligent travel agent that plans the perfect vacation to the wonderful city of AgentsVille! The system uses multiple AI agents and sophisticated reasoning patterns to create personalized, weather-aware itineraries that satisfy traveler preferences and constraints.
+This project implements an intelligent travel agent that plans the perfect vacation to the wonderful city of AgentsVille! The system uses multiple AI agents and reasoning patterns to create personalized, weather-aware itineraries that satisfy traveler preferences and constraints.
 
 ## 🚀 Key Features
 
@@ -69,86 +69,6 @@ This project implements an intelligent travel agent that plans the perfect vacat
    pip install -r requirements.txt
    ```
 
-## 📖 Usage Guide
-
-### Running the Notebook
-
-1. **Setup Phase** (Cells 1-4):
-   - Configure OpenAI client and model selection
-   - Set vacation parameters (travelers, dates, budget)
-
-2. **Data Exploration** (Cells 8-10):
-   - Review weather forecasts for travel dates
-   - Explore available activities in AgentsVille
-
-3. **Initial Planning** (Cells 12-14):
-   - Generate first itinerary using ItineraryAgent
-   - Review initial travel plan
-
-4. **Evaluation** (Cells 16-22):
-   - Run comprehensive evaluation suite
-   - Identify any issues with the plan
-
-5. **Refinement** (Cells 32-37):
-   - Use ItineraryRevisionAgent for improvements
-   - Apply traveler feedback and fix issues
-
-6. **Final Output** (Cells 38-40):
-   - Display refined travel plan
-   - Generate narrative trip summary
-
-### Customization Options
-
-#### Traveler Profiles
-Modify `VACATION_INFO_DICT` to customize:
-- Traveler names and ages
-- Interest categories (art, cooking, comedy, technology, etc.)
-- Travel dates
-- Budget constraints
-
-#### Model Selection
-Choose from available OpenAI models:
-- `GPT_41`: Strong general-purpose reasoning
-- `GPT_41_MINI`: Balanced speed and performance (default)
-- `GPT_41_NANO`: Fast and economical
-
-#### Evaluation Criteria
-The system includes multiple evaluation functions:
-- **Date Validation**: Ensures dates match vacation parameters
-- **Budget Compliance**: Verifies costs stay within budget
-- **Interest Matching**: Confirms activities align with preferences
-- **Weather Compatibility**: Prevents outdoor activities during bad weather
-- **Activity Authenticity**: Validates against real activity database
-
-## 🎮 Example Output
-
-### Sample Vacation Configuration
-```python
-VACATION_INFO_DICT = {
-    "travelers": [
-        {
-            "name": "Yuri",
-            "age": 30,
-            "interests": ["tennis", "cooking", "comedy", "technology"]
-        },
-        {
-            "name": "Hiro", 
-            "age": 25,
-            "interests": ["reading", "music", "theatre", "art"]
-        }
-    ],
-    "destination": "AgentsVille",
-    "date_of_arrival": "2025-06-10",
-    "date_of_departure": "2025-06-12", 
-    "budget": 130
-}
-```
-
-### Generated Itinerary Features
-- **Day 1 (Clear Weather)**: Outdoor activities like tennis and sightseeing
-- **Day 2 (Partly Cloudy)**: Mix of indoor and outdoor activities
-- **Day 3 (Thunderstorm)**: Indoor alternatives like VR experiences and theaters
-
 ## 🔧 Technical Implementation
 
 ### AI Agent Architecture
@@ -180,46 +100,3 @@ The system tracks multiple quality metrics:
 - ✅ **Weather Safety**: No outdoor activities during storms
 - ✅ **Feedback Integration**: Traveler preferences incorporated
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Weather Compatibility Failures**
-- Check if outdoor activities are scheduled during bad weather
-- Run additional ReAct cycles to replace problematic activities
-- Verify activity descriptions for weather suitability
-
-**Budget Overruns**
-- Use calculator tool to verify cost calculations
-- Swap expensive activities for budget-friendly alternatives
-- Check for duplicate cost calculations
-
-**Missing Activities**
-- Ensure activity IDs exist in the mock database
-- Use exact activity data from API responses
-- Avoid modifying activity details
-
-## 🤝 Contributing
-
-This project demonstrates advanced AI techniques for educational purposes. Key areas for enhancement:
-- Additional evaluation criteria
-- More sophisticated weather reasoning
-- Extended activity categories
-- Multi-city trip planning
-
-## 📚 Learning Outcomes
-
-By working through this project, you'll gain hands-on experience with:
-- Advanced prompt engineering techniques
-- Multi-agent AI system design
-- Structured data validation with Pydantic
-- ReAct reasoning pattern implementation
-- LLM evaluation and feedback loops
-
-## 📝 License
-
-This project is part of the Udacity Agentic AI Nanodegree program and is intended for educational use.
-
----
-
-**🎉 Congratulations!** You've successfully implemented a sophisticated AI travel planning system that showcases the power of modern LLM reasoning techniques!
